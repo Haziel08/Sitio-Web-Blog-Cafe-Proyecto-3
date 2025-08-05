@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog de Café</title>
-    
+    <meta name="description" content="Página web de blog de café" />
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
     <!--Preload-->
     <link rel="preload" href="css/normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="css/normalize.css" />
 
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="anonymous" as="font">
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
       rel="stylesheet"
@@ -55,7 +59,15 @@
 
         <article class="entrada">
           <div class="entrada__imagen">
-            <img loading="lazy" src="img/blog1.jpg" alt="imagen blog" />
+            <picture>
+              <source
+                srcset="img/blog1.webp"
+                type="image/webp"
+                loading="lazy"
+              />
+              <img loading="lazy" src="img/blog1.jpg" alt="imagen blog" />
+            </picture>
+            
           </div>
 
           <div class="entrada__contenido">
@@ -74,7 +86,14 @@
 
         <article class="entrada">
           <div class="entrada__imagen">
-            <img loading="lazy" src="img/blog2.jpg" alt="imagen blog" />
+            <picture>
+              <source
+                srcset="img/blog2.webp"
+                type="image/webp"
+                loading="lazy"
+              />
+              <img loading="lazy" src="img/blog2.jpg" alt="imagen blog" />
+            </picture>
           </div>
 
           <div class="entrada__contenido">
@@ -93,7 +112,14 @@
 
         <article class="entrada">
           <div class="entrada__imagen">
-            <img loading="lazy" src="img/blog3.jpg" alt="imagen blog" />
+            <picture>
+              <source
+                srcset="img/blog3.webp"
+                type="image/webp"
+                loading="lazy"
+              />
+              <img loading="lazy" src="img/blog3.jpg" alt="imagen blog" />
+            </picture>
           </div>
 
           <div class="entrada__contenido">
@@ -126,7 +152,7 @@
               <span class="widget-curso__info">20</span>
             </p>
             <a href="entrada.html" class="boton boton--secundario"
-              >Más Información</a
+              >Más Información Sobre Nuestros Cursos </a
             >
           </li>
 
@@ -141,7 +167,7 @@
               <span class="widget-curso__info">20</span>
             </p>
             <a href="entrada.html" class="boton boton--secundario"
-              >Más Información</a
+              >Más Información Sobre Nuestros Cursos</a
             >
           </li>
         </ul>
@@ -165,5 +191,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/modernizr.js"></script>
+
   </body>
 </html>
